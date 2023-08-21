@@ -1,0 +1,19 @@
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MVCProject1.Models.ViewModels
+{
+    public class ProductVM
+    {
+        public Product? Product { get; set; }
+
+        /* public Pro? Category { get; set; }
+         public CoverType? CoverType { get; set; }*/
+        public IEnumerable<SelectListItem>? CategoryList { get; set; }
+        public IEnumerable<SelectListItem>? CoverTypeList { get; set; }
+    }
+}

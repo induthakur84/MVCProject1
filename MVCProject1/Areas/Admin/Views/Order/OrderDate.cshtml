@@ -1,0 +1,99 @@
+﻿@model IEnumerable<MVCProject1.Models.OrderHeader>
+
+<h2>Orders</h2>
+
+<div>
+    
+     <div class="col-12">
+        @using (Html.BeginForm("OrderDate", "order", FormMethod.Post))
+        {
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" />
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" />
+    <label for="name"> Order Status:</label>
+
+    <select name="name">
+        <option value="SelectOrderStatus"> SelectOrderStatus</option>
+        <option value="AllOrders">AllOrder</option>
+        <option value="Pending">Pending</option>
+        <option value="Approved">Approved</option>
+
+    </select>
+            <input type="submit" value="submit">
+    }
+    </div>
+
+  
+</div>
+
+@if (Model != null)
+{
+    <div class="row">
+        <table class="table table-bordered table-active table-striped">
+            <thead>
+                <tr>
+                    <th> Name</th>
+                    <th> Order Date</th>
+                    <th> State</th>
+                    <th>City</th>
+                    <th> StreetAddress</th>
+                    <th>Order Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.OrderDate</td>
+                        <td>@item.State</td>
+                        <td>@item.City</td>
+                        <td>@item.StreetAddress</td>
+                        <td>@item.OrderStatus</td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+}
+
+@*@model List<OrderVM>
+
+<h2>Order Status Dates</h2>
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>Pending Date</th>
+        <th>Approved Date</th>
+        
+    </tr>
+    @foreach (var orderStatus in Model)
+    {
+        <tr>
+            <td>@orderStatus.OrderId</td>
+            <td>@orderStatus.PendingDate</td>
+            <td>@orderStatus.ApprovedDate</td>
+           
+        </tr>
+        <tr>
+            <td colspan="4">
+                <select>
+                    <option value="">Select Date</option>
+                    @if (orderStatus.PendingDate != null)
+                    {
+                        <option>@orderStatus.PendingDate</option>
+                    }
+                    @if (orderStatus.ApprovedDate != null)
+                    {
+                        <option>@orderStatus.ApprovedDate</option>
+                    }
+                   
+                </select>
+            </td>
+        </tr>
+    }
+</table>*@

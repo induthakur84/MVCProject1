@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MVCProject1.Models.OrderHeader>
+<div class="row">
+    <div class="col-9">
+        </br>
+        <h2 class="text-primary">List of Orders</h2>
+    </div>
+
+</div>
+<br />
+<br />
+<table id="tblData" class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Order Status</th>
+            <th>Order Date</th>
+            <th>OrderTotal</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.PhoneNumber</td>
+                <td>@item.OrderStatus</td>
+                <td>@item.OrderDate</td>
+                <td>@item.OrderTotal</td>
+                <td>
+                    @Html.ActionLink("Details","ViewDetail","Order",new {id=item.Id},new{@class="btn btn-info"})
+                    </td>
+
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+@*@section scripts
+    {
+        <script src="~/js/pending.js"></script>
+}*@

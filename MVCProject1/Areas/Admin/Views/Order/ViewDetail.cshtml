@@ -1,0 +1,242 @@
+﻿@model  MVCProject1.Models.OrderHeader
+
+
+@*<div class="row">
+    <div class="col-6 container border rounded">
+    <h2 class="text-center"> Pickup Details</h2></div>
+    <br />
+    <div class="row">
+        <div class="col-4">
+            <h4> OrderId &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.Id</h4>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4> CustomerName &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.Name</h4>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4> StreetAddress &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.StreetAddress</h4>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4> City &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.City</h4>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4> State &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.State</h4>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4> PostalCode &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.PostalCode</h4>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4> OrderId &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.PhoneNumber</h4>
+    </div>
+    </div>
+   
+
+    <div class="row">
+    < class="col-6 container border rounded"
+    <h2 class="text-center"> Order Details></h2></div>
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <h4> OrderDate &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.OrderDate</h4>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4> Shipping Date &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.ShippingDate</h4>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4> Tracking number &nbsp; =</h4>
+        </div>
+    <div class="col-8">
+        <h4>@Model.TrackingNumber</h4>
+    </div>
+    </div>
+   *@
+   <div class="card">
+
+    
+    <div class="card-body">
+        <div class="card">
+            <div class="card-header">
+                <h4>
+                    PICKUP DETAILS
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="card-body">
+                    <div class="row mb-2 weigh">
+                        <div class="col-sm-6" >
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label" >Order Id</label>
+                            <input class="form-control" asp-for="@Model.Id" />
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Customer Name</label>
+
+                            <input class="form-control" asp-for="@Model.Name" />
+                            <span class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label" >StreetAddress</label>
+
+                            <input type="text" class="form-control" asp-for="@Model.StreetAddress" />
+
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">City</label>
+
+                            <input class="form-control" asp-for="@Model.City" />
+                            <span class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label" >State</label>
+                            
+                            <input type="text" class="form-control" asp-for="@Model.State" />
+
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Postal Code</label>
+
+                            <input class="form-control" asp-for="@Model.PostalCode" />
+                            <span class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label" >Phone Number</label>
+                           
+                            <input type="text" class="form-control" asp-for="@Model.PhoneNumber" />
+
+                            <span class="text-danger"></span>
+                        </div>
+                       @* <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Purchase Account</label>
+
+                            <input class="form-control" />
+                            <span class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row mb-4">
+
+                        <div class="form-group col-6 ">
+                            <br />
+                            <button type="submit" class="btn btn-primary" style="width:150px;">Save</button>
+                        </div>*@
+                        <div class="form-group col-6 ">
+                            <br />
+                            <br />
+                             <partial name="BackToList" />
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="card">
+
+
+    <div class="card-body">
+        <div class="card">
+            <div class="card-header">
+                <h4>
+                    ORDER DETAILS
+                </h4>
+            </div>
+            <div class="card-body">
+                <div class="card-body">
+                    <div class="row mb-2 weigh">
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Order Date</label>
+                            <input class="form-control" asp-for="@Model.OrderDate" />
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Shipping Date</label>
+
+                            <input class="form-control" asp-for="@Model.ShippingDate" />
+                            <span class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-sm-6">
+                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Tracking Number</label>
+
+                            <input type="text" class="form-control" asp-for="@Model.TrackingNumber" />
+
+                            <span class="text-danger"></span>
+                        </div>
+                      
+                        <div class="form-group col-6 ">
+                            <br />
+                            <br />
+                            <partial name="BackToList" />
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
